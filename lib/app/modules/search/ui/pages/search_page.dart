@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_template/app/modules/search/domain/entities/result.dart';
 import 'package:flutter_template/app/modules/search/domain/errors/errors.dart';
-import 'package:flutter_template/app/modules/search/ui/search_store.dart';
+import 'package:flutter_template/app/modules/search/ui/stores/search_store.dart';
 import 'package:flutter_triple/flutter_triple.dart';
 
 class SearchPage extends StatefulWidget {

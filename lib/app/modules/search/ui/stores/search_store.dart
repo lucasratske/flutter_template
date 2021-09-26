@@ -2,10 +2,8 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_template/app/modules/search/domain/entities/result.dart';
 import 'package:flutter_template/app/modules/search/domain/errors/errors.dart';
 import 'package:flutter_template/app/modules/search/domain/use_cases/search_by_text.dart';
-import 'package:flutter_template/app/modules/search/ui/search_adapter.dart';
+import 'package:flutter_template/app/modules/search/ui/adapters/search_adapter.dart';
 import 'package:mobx_triple/mobx_triple.dart';
-
-part 'search_store.g.dart';
 
 @Injectable()
 class SearchStore extends MobXStore<Failure, List<Result>> {
