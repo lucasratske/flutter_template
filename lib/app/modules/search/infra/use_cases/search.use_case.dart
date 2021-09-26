@@ -3,17 +3,14 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_template/app/modules/search/domain/entities/result.dart';
 import 'package:flutter_template/app/modules/search/domain/errors/errors.dart';
 import 'package:flutter_template/app/modules/search/domain/repositories/search_repository.dart';
-part 'search_by_text.g.dart';
-
-mixin SearchByText {
-  Future<Either<Failure, List<Result>>> call(String textSearch);
-}
+import 'package:flutter_template/app/modules/search/domain/use_cases/search.use_case.dart';
+part 'search.use_case.g.dart';
 
 @Injectable(singleton: false)
-class SearchByTextImpl implements SearchByText {
-  final SearchRepository repository;
+class SearchUseCase implements SearchUseCaseAbstract {
+  final SearchRepositoryAbstract repository;
 
-  SearchByTextImpl(this.repository);
+  SearchUseCase(this.repository);
 
   @override
   Future<Either<Failure, List<Result>>> call(String? textSearch) async {

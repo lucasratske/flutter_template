@@ -8,10 +8,10 @@ import 'package:flutter_template/app/modules/search/infra/models/result_model.da
 part 'search_repository_impl.g.dart';
 
 @Injectable(singleton: false)
-class SearchRepositoryImpl implements SearchRepository {
+class SearchRepository with SearchRepositoryAbstract {
   final SearchDatasource datasource;
 
-  SearchRepositoryImpl(this.datasource);
+  SearchRepository(this.datasource);
 
   @override
   Future<Either<Failure, List<Result>>> getUsers(String searchText) async {
